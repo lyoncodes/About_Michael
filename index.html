@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Lyon Quiz</title>
+    <link href = "style.css" type = "text/css" rel = "stylesheet"/>
+</head>
+<body>
+    <h1>About Michael</h1>  
+    <ul class = "navigation">
+        <li>Resume</li>
+        <li>Works</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+  <div class = "content">
+    <h3>things to read</h3>
+        <ol id = "thingsToRead">
+        <li>East of Eden - Steinbeck</li>
+        <li>The Road - McCarthy</li>
+        <li>Sometimes a Great Notion - Kesey</li>
+        <li>Dune - Herbert</li>
+        <li>Instructions to the Tenzo - Dogen</li>
+        <li>The Sound and the Fury - Faulkner</li>
+        <li>The Library of Babel - Borges</li>
+        <li>The Call of the Wild - London</li>
+        <li>The Elements of Style - Strunk & White</li>
+    </ol> 
+    <h3>things to watch</h3>
+        <ol class = "watchlist">
+        <li>Hoop Dreams</li>
+        <li>Microcosmos</li>
+        <li>Baraka</li>
+        <li>The Wire</li>
+        <li>Seinfeld</li>
+        <li>There Will Be Blood</li>
+        <li>Grizzly Man</li>
+        <li>Taxi Driver</li>
+        <li>This is Spinal Tap</li>
+        <li>Chapelle's Show</li>
+    </ol>
+    <h3>things to hear</h3> 
+    <ol id ="thingsToHear">
+        <li>In a Silent Way - Miles Davis</li>
+        <li>A Love Supreme - John Coltrane</li>
+        <li>In Pursuit of the 27th Man - Horace Silver</li>
+        <li>The Payback - James Brown</li>
+        <li>Endtroducing - DJ Shadow</li>        
+        <li>The Chronic - Dr. Dre</li>
+        <li>Selected Ambient Works - Aphex Twin</li>
+        <li>The Roots of Dub - King Tubby</li>
+        <li>Trout Mask Replica - Captain Beefheart</li>
+        <li>Led Zeppelin IV - Led Zeppelin</li>
+    </ol>
+   </div>
+<!-- Font taken from Google Development Tools-->
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+<link href = "style.css" type = "text/css" rel = "stylesheet" />
+<script>   
+quiz = [  
+    {question: 'should I get a dog?', answer: 'yes'},
+    {question: 'do I start drinking more wine?', answer: 'yes'},
+    {question: 'are clean clothes really that important?', answer: 'yes'},
+    {question: 'do I toss out my SNES?', answer: 'no'},
+    {question: 'most importantly, do I let go of that stuff in the past?', answer: 'yes'},
+],
+userAlert = function(){
+        var username;
+        do{
+            username = prompt("Hello! Here you have the chance to help the developer decide some important life choices. First tell us your name panda friend.");
+        }while(!username);
+            alert('Nice to meet you, ' + username+ '. lets go!')
+        return username;
+}
+questionGame = function(){
+  var userInput;
+  var score;
+    for(let i = 0; i < quiz.length; i++){
+    do{
+        userInput = prompt(quiz[i].question)
+    }while (!userInput);
+        userInput = userInput.toLowerCase();
+    if (userInput === (quiz[i].answer)){
+        alert("nice job! +1");
+        score++;
+    }else if (userInput !== (quiz[i].answer)){
+        alert("oof! -1");
+    }
+    }  
+  } 
+var numberQuestion = "BONUS ROUND ONE: the Developer would like to go skiing in Japan with his girlfriend, but he forgot what time the boat leaves! He just remembers that it was sometime between 1 and 10. The sailors at the dock are skeptical you even have a ticket, and give you four chances to guess the correct departure time. What time do you think it leaves?"
+var passcode = Math.floor(Math.random()*10);
+console.log(passcode + ' is the number')
+var randomFunction = function(){
+    var guess = 0;
+    var answer;
+    while(guess < 4){
+        guess++;
+        input = prompt(numberQuestion);
+    if(input == passcode){
+        alert("correct! youre coming with dude!")
+        break;    
+    }else if (input > passcode){
+        alert("sailor guy: 'too big!'")
+    }else if (input < passcode){
+        alert("sailor gal: 'too small!")
+    }
+    }
+}
+var statesQuestion = "BONUS ROUND TWO: can you guess what other states the Dev has lived in besides washington? There are 3 others, and their first letters are A, T, and O. You have six tries, so go ahead and type in the name of a state.";
+var states = ['Texas', 'Oregon', 'Arkansas'];
+var statesFunction = function(){
+    var answer;
+    for(let i = 0; i < states.length + 3; i ++){    
+    do{
+        answer = prompt(statesQuestion);
+    } while (!answer)
+    if (answer === states[i]){
+        alert("nice one.")
+        break; //sloppy code
+    }else if (answer !== states[i]);
+        alert("try again!") 
+}
+}
+userAlert();
+questionGame(quiz);
+alert("time for the bonus rounds!");
+randomFunction(numberQuestion);
+statesFunction(statesQuestion);
+alert("thanks for playing! here's some of the dev's favorite things. you can tell a lot about him by these lists:")
+</script>        
+</body>
+</html>

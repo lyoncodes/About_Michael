@@ -1,0 +1,52 @@
+/*globals*/
+body {
+    border: 3px #111111;
+    font-family: 'Noto Serif', serif;
+    text-align: center;
+}
+h1, h3 {
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    font-weight: 500;
+    color: #404040;
+}
+ol,ul {
+    list-style: none;
+}
+.navigation {
+    list-style: none;
+    font-family: 'Noto Serif', serif;
+    padding: 15px;
+    margin: 0px auto 0px auto;  
+}
+.navigation li {
+    padding: 15px;
+    display: inline; 
+}
+.content {
+    list-style: none;
+    font-family: 'Noto Serif', serif;
+    padding: 5px;
+    text-align: left;   
+}
+.content ol {
+    padding: 5px;
+    display: block;
+    text-align: center;
+}
+
+/* 
+#page {
+    max-width: 940 px;
+    min-width: 720 px;
+    margin: 10px auto 10px auto;
+    padding: 20px;
+    background-color: #ffffff;
+}
+#navigation {
+    font-family: 'Noto Serif', serif;
+    width: 570px;
+    padding: 15px;
+    margin: 0px auto 0px auto;
+    text-align: center;
+} */
